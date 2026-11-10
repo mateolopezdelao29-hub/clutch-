@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B0F1A">
+<meta property="og:title" content="Clutch | Fotos y video de tu competencia">
+<meta property="og:description" content="Fotos y video profesionales de atletas y equipos. Precio cerrado y pago en línea.">
+<meta property="og:type" content="website">
+<title>Clutch | Fotos y video de tu competencia</title>
+<meta name="description" content="Fotos y video profesionales de atletas y equipos en carreras, competencias de fitness y fútbol americano en la Ciudad de México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#0B0F1A; --shutter:#E11D2E; --on-brand:#fff;
+  --bg:#FAFAFA; --ink:#0B0F1A; --muted:#4B5563; --card:#fff; --line:#E5E7EB; --accent:#0B0F1A;
+  --display:"Sora",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1422;--ink:#F2F4FF;--muted:#9CA3AF;--card:#161C2E;--line:#2A3142;--accent:#FF4D5A}}
+:root[data-theme="dark"]{--bg:#0F1422;--ink:#F2F4FF;--muted:#9CA3AF;--card:#161C2E;--line:#2A3142;--accent:#FF4D5A}
+html{background:var(--brand);scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+:focus-visible{outline:3px solid var(--shutter);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0}
+.btn{display:inline-block;font:600 17px/1 var(--body);padding:16px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;background:var(--shutter);color:#fff;text-align:center}
+.btn:hover{filter:brightness(.94)}
+.btn.line{background:transparent;color:inherit;border:2px solid currentColor}
+.hero{background:var(--brand);color:var(--on-brand);padding:24px 0 56px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:44px}
+.logo{font:800 26px/1 var(--display);letter-spacing:.06em;color:inherit;text-decoration:none}
+.top .btn{padding:11px 18px;font-size:15px}
+.hgrid{display:grid;gap:34px;grid-template-columns:1fr}
+@media(min-width:900px){.hgrid{grid-template-columns:1.1fr .9fr;align-items:center}}
+.hero h1{font-size:clamp(36px,7vw,72px)}
+.hero p.sub{font-size:clamp(18px,2.3vw,21px);max-width:34ch;margin:20px 0 22px}
+.facts{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;color:#9CA3AF}
+.facts b{color:#fff;font-weight:600}
+/* Cotizador */
+.qz{background:#fff;color:#0B0F1A;border-radius:22px;padding:22px;box-shadow:10px 10px 0 var(--shutter)}
+.qh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.qh b{font:800 21px/1.1 var(--display)}
+.qh span{font-size:14px;color:#4B5563}
+.bar{height:6px;background:#E5E7EB;border-radius:9px;margin:10px 0 18px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brand);width:25%;transition:width .25s}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid #E5E7EB;border-radius:14px;padding:14px 16px;margin-bottom:10px;cursor:pointer;font:inherit;color:inherit}
+.opt:hover{border-color:var(--brand)}
+.opt b{display:block;font-size:18px}.opt span{color:#4B5563;font-size:15px}
+.qz label{display:grid;gap:5px;font-weight:600;font-size:14px;margin-bottom:12px}
+.qz input,.qz select{font:400 16px/1.3 var(--body);padding:12px;border-radius:10px;border:2px solid #E5E7EB;background:#fff;color:#0B0F1A;width:100%}
+.chips{display:flex;gap:8px;margin-bottom:12px}
+.chip{flex:1;padding:11px;border-radius:10px;border:2px solid #E5E7EB;background:#fff;font:600 15px var(--body);color:#0B0F1A;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.sum{margin:0 0 14px;padding:0;display:grid;gap:8px}
+.sum div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #E5E7EB;padding-bottom:8px}
+.sum dt{color:#4B5563}.sum dd{margin:0;font-weight:600;text-align:right}
+.price{font:800 28px/1 var(--display);margin:6px 0 14px}.price small{font:400 14px var(--body);color:#4B5563}
+.back{background:none;border:0;color:#4B5563;font:600 14px var(--body);cursor:pointer;padding:10px 0 0;text-decoration:underline}
+.qe{color:#B3261E;min-height:1.2em;font-size:14px;font-weight:600}
+/* Secciones */
+section{padding:68px 0}
+h2{font-size:clamp(28px,4.6vw,44px);margin-bottom:24px}
+.lead{max-width:54ch;color:var(--muted);margin:-6px 0 28px}
+.sp{list-style:none;margin:0;padding:0;border-top:2px solid var(--line)}.sp li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:2px solid var(--line)}.sp b{font:700 clamp(21px,3.8vw,32px)/1.1 var(--display);letter-spacing:-.01em}.sp span{color:var(--muted);font-size:15px;text-align:right}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));counter-reset:s}
+.steps li{counter-increment:s;border-top:4px solid var(--accent);padding-top:14px}
+.steps li::before{content:counter(s);display:block;font:800 34px/1 var(--display);color:var(--accent);margin-bottom:6px}
+.steps b{display:block;font-size:19px}.steps span{color:var(--muted)}
+.inc{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.inc li{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:12px}
+.inc li::before{content:"✓";color:var(--accent);font-weight:700}
+.inc b{display:block}.inc span{color:var(--muted);font-size:15px}
+details{border-bottom:2px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin:10px 0 0;max-width:62ch}
+.gal{columns:2;column-gap:10px}
+@media(min-width:760px){.gal{columns:3}}
+.ph{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#0B0F1A,#1D2438);break-inside:avoid;margin-bottom:10px}
+.ph.e{aspect-ratio:4/5}
+.ph img{width:100%;height:auto;display:block}
+.ph span{position:absolute;left:12px;bottom:10px;font:600 13px var(--body);color:#9CA3AF}
+.ph.e::before{content:"C";position:absolute;inset:0;display:grid;place-items:center;font:800 64px var(--display);color:rgba(255,255,255,.08)}
+.rv{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rv figure{margin:0;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:20px}
+.rv blockquote{margin:0 0 12px}.rv figcaption{color:var(--muted);font-size:15px}
+.empty{border:2px dashed var(--line);border-radius:14px;padding:22px;color:var(--muted);max-width:60ch}
+.tn{display:none;gap:24px;font-size:15px}.tn a{color:#9CA3AF;text-decoration:none}.tn a:hover{color:#fff}
+@media(min-width:700px){.tn{display:flex}}
+.pk{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.pc{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.pc.main{border-color:var(--ink)}
+.pc h3{font-size:24px}
+.pc .pr{font:800 38px/1 var(--display);letter-spacing:-.02em}
+.pc .pr small{font:400 13px var(--body);color:var(--muted);letter-spacing:0}
+.pc ul{list-style:none;margin:0;padding:0;color:var(--muted);flex:1}
+.pc li{padding:4px 0}
+.pc .btn{background:var(--ink);color:var(--bg)}
+.note{font-size:13px;color:#4B5563;margin:6px 0 12px}
+.mq{background:var(--brand);color:#9CA3AF;overflow:hidden;border-top:1px solid rgba(255,255,255,.14);padding:14px 0;white-space:nowrap}
+.mq div{display:inline-block;animation:mq 34s linear infinite}
+.mq span{margin:0 24px;font-size:14px;letter-spacing:.04em}
+@keyframes mq{to{transform:translateX(-50%)}}
+.up{background:#EEF1F5;color:#0B0F1A;border-radius:12px;padding:12px 14px;font-size:14px;margin:0 0 12px}
+.up button{background:none;border:0;color:#0B0F1A;font:600 14px var(--body);text-decoration:underline;cursor:pointer;padding:6px 0 0;display:block}
+.warn{background:#FFF1F2;color:#7A0C16;border-radius:12px;padding:12px 14px;font-size:14px;margin:0 0 12px}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;background:#E11D2E;color:#fff;padding:13px 18px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.band{background:var(--brand);color:var(--on-brand)}
+.band p{max-width:48ch;color:#9CA3AF;margin:0 0 22px}
+footer{background:var(--brand);color:var(--on-brand);padding:30px 0 40px;font-size:15px;border-top:1px solid rgba(255,255,255,.25)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mq div{animation:none}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+ <div class="wrap">
+  <div class="top"><a class="logo" href="#top">CLUTCH</a><nav class="tn"><a href="#paquetes">Paquetes</a><a href="#portafolio">Portafolio</a></nav><a class="btn" href="#cotizar">Cotizar</a></div>
+  <div class="hgrid">
+   <div>
+    <h1>Tú compites. Nosotros guardamos el momento.</h1>
+    <p class="sub">Fotos y video profesionales de tu carrera, torneo o competencia, editados y listos para publicar.</p>
+    <div class="facts"><span><b>Precio cerrado</b></span><span><b>Pago en línea</b></span><span><b>Entrega desde 24 horas</b></span></div>
+   </div>
+   <div class="qz" id="cotizar" aria-live="polite">
+    <div class="qh"><b id="qt"></b><span id="qs"></span></div>
+    <div class="bar"><i id="qp"></i></div>
+    <div id="qb"></div>
+   </div>
+  </div>
+ </div>
+</header>
+<div class="mq" aria-hidden="true"><div><span>Medios maratones</span><span>Carreras de 5 y 10 km</span><span>Hyrox</span><span>Fútbol americano</span><span>Retos de gimnasio</span><span>Competencias fitness</span><span>Entrenamientos</span><span>Contenido para redes</span><span>Medios maratones</span><span>Carreras de 5 y 10 km</span><span>Hyrox</span><span>Fútbol americano</span><span>Retos de gimnasio</span><span>Competencias fitness</span><span>Entrenamientos</span><span>Contenido para redes</span></div></div>
+
+<main>
+<section id="cubrimos">
+ <div class="wrap">
+  <h2>Lo que cubrimos</h2>
+  <ul class="sp">
+   <li><b>Carreras</b><span>5K, 10K, medios maratones y maratones</span></li>
+   <li><b>Fitness y gimnasios</b><span>Competencias, retos y eventos de marca</span></li>
+   <li><b>Fútbol americano</b><span>Partidos y torneos</span></li>
+   <li><b>Hyrox</b><span>Individual, en pareja y por relevos</span></li>
+  </ul>
+ </div>
+</section>
+
+<section style="padding-top:0" id="paquetes">
+ <div class="wrap">
+  <h2>Paquetes</h2>
+  <p class="lead">Precio cerrado y pago en línea. Eliges tu paquete, pagas y apartamos tu fecha.</p>
+  <div class="pk" id="pks"></div>
+ </div>
+</section>
+
+<section style="padding-top:0" id="portafolio">
+ <div class="wrap">
+  <h2>Portafolio</h2>
+  <div class="gal" id="gal"></div>
+ </div>
+</section>
+
+<section style="padding-top:0" id="como">
+ <div class="wrap">
+  <h2>Así de fácil</h2>
+  <ol class="steps">
+   <li><b>Elige tu paquete</b><span>Pocas preguntas, sin formularios eternos.</span></li>
+   <li><b>Paga en línea</b><span>Con tarjeta, de forma segura. Así apartamos tu fecha.</span></li>
+   <li><b>Publica y presume</b><span>Recibes tus mejores tomas, editadas y listas para redes.</span></li>
+  </ol>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <h2>Por qué Clutch</h2>
+  <p class="lead">Todo claro antes de pagar.</p>
+  <ul class="inc">
+   <li><div><b>Precio cerrado</b><span>Lo que ves es lo que pagas, sin cargos escondidos.</span></div></li>
+   <li><div><b>Pago seguro</b><span>Con tarjeta mediante Mercado Pago. No guardamos tus datos.</span></div></li>
+   <li><div><b>Entrega con fecha</b><span>Cada paquete trae su tiempo de entrega, desde 24 horas.</span></div></li>
+   <li><div><b>Material curado</b><span>No te mandamos 500 fotos iguales. Te entregamos las mejores, editadas.</span></div></li>
+   <li><div><b>Videos verticales</b><span>Listos para historias y reels.</span></div></li>
+   <li><div><b>Atención por WhatsApp</b><span>Resolvemos dudas y ajustamos si tu evento es distinto.</span></div></li>
+  </ul>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cuánto cuesta?</summary><p>Los paquetes van desde $1,990 y son de precio cerrado. Si tu evento necesita algo distinto, escríbenos por WhatsApp y te cotizamos.</p></details>
+  <details><summary>¿Cómo se paga?</summary><p>En línea, con tarjeta de crédito o débito, mediante Mercado Pago. No recibimos ni guardamos los datos de tu tarjeta. Al pagar, nos mandas tu evento y fecha por WhatsApp y los dejamos agendados.</p></details>
+  <details><summary>¿Cómo funciona para un equipo?</summary><p>Cuéntanos cuántos son y qué quieren cubrir (partido, torneo, sesión de club). Armamos la cotización para todo el equipo.</p></details>
+  <details><summary>¿De quién es el material?</summary><p>Los derechos de uso se acuerdan por escrito en tu cotización, para que sepas exactamente dónde puedes publicarlo.</p></details>
+  <details><summary>¿Y si mi evento es en menos de 48 horas?</summary><p>Escríbenos por WhatsApp cuanto antes. Lo atendemos primero y confirmamos si hay equipo disponible para tu fecha.</p></details>
+  <details><summary>¿Puedo pedir algo distinto a los paquetes?</summary><p>Sí. Para equipos, varios eventos o necesidades especiales, cotizamos a la medida por WhatsApp.</p></details>
+  <details><summary>¿Qué necesitan de mi parte?</summary><p>El nombre y la fecha del evento, el lugar, tu número o forma de reconocerte y un contacto. Entre más anticipación, mejor.</p></details>
+  <details><summary>¿Cubren eventos fuera de la Ciudad de México?</summary><p>Por ahora cubrimos la Ciudad de México y alrededores. Si tu evento es fuera de la ciudad, cuéntanos dónde es y te confirmamos disponibilidad y traslado en la cotización.</p></details>
+ </div>
+</section>
+
+<section class="band">
+ <div class="wrap">
+  <h2>¿Foto o video deportivo?</h2>
+  <p>Únete a la red de Clutch. Te conseguimos eventos y tú te enfocas en tomar buenas fotos.</p>
+  <a class="btn" id="join" href="#">Unirme a la red</a>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Clutch | Fotos y video deportivo, Ciudad de México</span><a href="https://www.instagram.com/clutch.cobertura" target="_blank" rel="noopener" style="color:inherit">@clutch.cobertura</a></div></footer>
+
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+// CONFIGURA AQUÍ: WhatsApp (formato internacional, sin +) y precios (null = se confirma por WhatsApp)
+var WA = "5255XXXXXXXX";
+var PKGS = [
+  {n:"Esencial", d:"20 fotos y 8 videos editados", t:"2 días", p:1990},
+  {n:"Plus", d:"30 fotos y 24 videos editados", t:"2 a 4 días", p:2490},
+  {n:"Cobertura completa", d:"50 fotos, 35 videos y 3 reels", t:"24 horas", p:3790}
+];
+var S = {step:1, pkg:0, who:"Atleta", sport:"Carrera", ev:"", date:"", name:"", where:"Ciudad de México y área metropolitana", notes:""};
+var WHERE0 = "Ciudad de México y área metropolitana";
+var $ = function(i){return document.getElementById(i)};
+function wa(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
+$("join").href = wa("Hola, soy fotógrafo/videógrafo y quiero unirme a la red de Clutch. Mi portafolio: ");
+$("fab").href = wa("Hola, tengo una duda sobre Clutch 📸");
+
+function el(tag, cls, txt){var e=document.createElement(tag); if(cls)e.className=cls; if(txt!==undefined)e.textContent=txt; return e}
+function head(t){ $("qt").textContent=t; $("qs").textContent=S.step+" / 4"; $("qp").style.width=(S.step*25)+"%"; $("qb").textContent=""; }
+
+function step1(){
+  S.step=1; head("Elige tu paquete");
+  PKGS.forEach(function(p,i){
+    var b=el("button","opt"); b.type="button";
+    b.appendChild(el("b","",p.n)); b.appendChild(el("span","",p.d+" · entrega en "+p.t+" · $"+p.p.toLocaleString("es-MX")));
+    b.onclick=function(){S.pkg=i; step2()};
+    $("qb").appendChild(b);
+  });
+  var c=el("a","back","¿Necesitas algo distinto? Cotiza a la medida por WhatsApp"); c.style.display="block";
+  c.href=wa("Hola, quiero una cotización a la medida con Clutch 📸\n\n*Deporte y evento:* \n*Fecha:* \n*Lugar:* \n*Qué necesito:* "); c.target="_blank"; c.rel="noopener";
+  $("qb").appendChild(c);
+}
+function step2(){
+  S.step=2; head("Cuéntanos tu evento");
+  var q=$("qb");
+  function field(label, node){var l=el("label","",label); l.appendChild(node); q.appendChild(l); return node}
+  var sp=el("select"); ["Carrera","Gimnasio o competencia fitness","Fútbol americano","Hyrox","Otro"].forEach(function(o){var x=el("option","",o); sp.appendChild(x)}); sp.value=S.sport; field("Deporte",sp);
+  var ev=el("input"); ev.placeholder="Ej. 10K de otoño"; ev.value=S.ev; field("Nombre del evento",ev);
+  var dt=el("input"); dt.type="date"; dt.value=S.date; field("Fecha",dt);
+  var nm=el("input"); nm.autocomplete="name"; nm.value=S.name; field("Tu nombre",nm);
+  var wh=el("select"); [WHERE0,"Otra ciudad"].forEach(function(o){wh.appendChild(el("option","",o))}); wh.value=S.where; field("¿Dónde es?",wh);
+  var nt=el("input"); nt.placeholder="Ej. somos 12 del equipo"; nt.value=S.notes; field("Notas (opcional)",nt);
+  var er=el("div","qe"); er.setAttribute("role","alert"); q.appendChild(er);
+  var go=el("button","btn","Ver mi resumen"); go.type="button"; go.style.width="100%";
+  go.onclick=function(){
+    S.where=wh.value; S.notes=nt.value.trim(); S.sport=sp.value; S.ev=ev.value.trim(); S.date=dt.value; S.name=nm.value.trim();
+    if(!S.ev||!S.name){er.textContent="Falta tu nombre y el nombre del evento."; return}
+    step3();
+  };
+  q.appendChild(go);
+  var bk=el("button","back","Cambiar paquete"); bk.type="button"; bk.onclick=step1; q.appendChild(bk);
+}
+var PAY = [null,null,null]; // Links de pago de Mercado Pago, uno por paquete (en el mismo orden): "https://mpago.la/xxxx"
+function days(d){ return (new Date(d+"T00:00:00") - new Date(new Date().toDateString()))/864e5; }
+function msg(kind){
+  var p=PKGS[S.pkg], L=[kind==="paid" ? "Hola, ya pagué mi paquete de Clutch ✅ Te mando mi comprobante." : "Hola, quiero cotizar con Clutch 📸", ""];
+  L.push("*Nombre:* "+S.name, "*Deporte:* "+S.sport, "*Evento:* "+S.ev, "*Fecha:* "+(S.date||"Por confirmar"), "*Lugar:* "+S.where, "*Paquete:* "+p.n+" ($"+p.p.toLocaleString("es-MX")+")");
+  if(S.notes) L.push("*Notas:* "+S.notes);
+  return L.join("\n");
+}
+function link(txt,cls,href){ var a=el("a",cls,txt); a.style.display="block"; a.style.marginBottom="10px"; a.href=href; a.target="_blank"; a.rel="noopener"; return a; }
+function step3(){
+  S.step=3; head("Tu paquete está listo");
+  var q=$("qb"), p=PKGS[S.pkg], dl=el("dl","sum");
+  var urgent = S.date && days(S.date)<2, far = S.where!==WHERE0;
+  [["Paquete",p.n],["Entrega",p.t],["Deporte",S.sport],["Evento",S.ev],["Fecha",S.date||"Por confirmar"],["Lugar",far?"Otra ciudad":"CDMX y área metropolitana"]].forEach(function(r){
+    var d=el("div"); d.appendChild(el("dt","",r[0])); d.appendChild(el("dd","",r[1])); dl.appendChild(d);
+  });
+  q.appendChild(dl);
+  var pr=el("div","price"); pr.textContent="$"+p.p.toLocaleString("es-MX"); pr.appendChild(el("small",""," precio cerrado")); q.appendChild(pr);
+  if(urgent) q.appendChild(el("div","warn","Tu evento es en menos de 48 horas. Lo atendemos primero por WhatsApp para confirmar que hay equipo disponible."));
+  else if(far) q.appendChild(el("div","warn","Tu evento es fuera de la zona metropolitana. Te cotizamos el traslado por WhatsApp antes de cobrar."));
+  else if(S.pkg<PKGS.length-1){
+    var n=PKGS[S.pkg+1], u=el("div","up","Sube a "+n.n+" por $"+(n.p-p.p).toLocaleString("es-MX")+" más: "+n.d+", entrega en "+n.t+".");
+    var ub=el("button","","Cambiar a "+n.n); ub.type="button"; ub.onclick=function(){S.pkg++; step3()}; u.appendChild(ub); q.appendChild(u);
+  }
+  if(PAY[S.pkg] && !urgent && !far){
+    var pay=link("Pagar ahora","btn",PAY[S.pkg]); pay.onclick=function(){setTimeout(step4,500)}; q.appendChild(pay);
+    q.appendChild(el("p","note","Pago seguro con Mercado Pago, con tarjeta de crédito o débito."));
+    q.appendChild(link("Prefiero platicarlo por WhatsApp","btn line",wa(msg("quote"))));
+  } else if(urgent || far){
+    q.appendChild(link("Cotizar por WhatsApp","btn",wa(msg("quote"))));
+  } else {
+    q.appendChild(link("Reservar por WhatsApp","btn",wa(msg("quote"))));
+    q.appendChild(el("p","note","Te confirmamos disponibilidad y te enviamos tu link de pago."));
+  }
+  var bk=el("button","back","Editar datos"); bk.type="button"; bk.onclick=step2; q.appendChild(bk);
+}
+function step4(){
+  S.step=4; head("Último paso: confirma tu fecha");
+  var q=$("qb");
+  q.appendChild(el("p","","Cuando termines tu pago, mándanos tu comprobante por WhatsApp. Ahí queda agendado tu evento."));
+  q.appendChild(link("Enviar comprobante por WhatsApp","btn",wa(msg("paid"))));
+  var bk=el("button","back","Volver al resumen"); bk.type="button"; bk.onclick=step3; q.appendChild(bk);
+}
+// PORTAFOLIO Y RESEÑAS: se llenan con material real.
+// Las fotos deben ir incrustadas (data:) porque la página no carga archivos externos.
+var GALLERY = [
+ {
+  "src": "img/foto-1.jpg",
+  "alt": "Corredor de Toluca celebrando con el balón en un partido de fútbol americano"
+ },
+ {
+  "src": "img/foto-2.jpg",
+  "alt": "Jugador de Tigres de perfil con casco durante un partido"
+ },
+ {
+  "src": "img/foto-3.jpg",
+  "alt": "Jugadores de Politécnico en un bloqueo durante una jugada"
+ },
+ {
+  "src": "img/foto-4.jpg",
+  "alt": "Línea ofensiva y defensiva en acción en el campo"
+ },
+ {
+  "src": "img/foto-5.jpg",
+  "alt": "Jugador de pádel en la cancha devolviendo la pelota"
+ },
+ {
+  "src": "img/foto-6.jpg",
+  "alt": "Jugador de pádel estirándose para llegar a la pelota"
+ },
+ {
+  "src": "img/foto-7.jpg",
+  "alt": "Jugador de pádel caminando por la cancha con la raqueta"
+ }
+];  // {src:"data:image/jpeg;base64,...", alt:"Descripción"}
+var SPORTS = ["Carreras","Fitness y gimnasios","Fútbol americano","Hyrox"];
+var fsel = "Todo";
+function renderGal(){
+  var g=$("gal"); g.textContent="";
+  var items = GALLERY.length ? GALLERY : [0,1,2,3,4,5].map(function(i){return {sport:SPORTS[i%4],e:true}});
+  items.filter(function(x){return fsel==="Todo"||x.sport===fsel}).forEach(function(x){
+    var d=el("div","ph"+(x.e?" e":""));
+    if(x.src){var im=el("img"); im.src=x.src; im.alt=x.alt||"Foto de Clutch"; im.loading="lazy"; d.appendChild(im)}
+    g.appendChild(d);
+  });
+}
+renderGal();
+var pks=$("pks");
+PKGS.forEach(function(p,i){
+  var c=el("article","pc"+(i===1?" main":""));
+  c.appendChild(el("h3","",p.n));
+  var pr=el("div","pr","$"+p.p.toLocaleString("es-MX")); pr.appendChild(el("small",""," precio cerrado")); c.appendChild(pr);
+  var ul=el("ul"); [p.d,"Entrega en "+p.t].forEach(function(t){ul.appendChild(el("li","",t))}); c.appendChild(ul);
+  var b=el("a","btn","Elegir este paquete"); b.href="#cotizar";
+  b.onclick=function(){S.pkg=i; step2()};
+  c.appendChild(b); pks.appendChild(c);
+});
+step1();
+</script>
+</body>
+</html>
